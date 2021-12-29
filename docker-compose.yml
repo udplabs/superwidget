@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - DJANGO_DEBUG=True
+      - SECRET_KEY=abcdefghijklmnopqrstuvwxyz
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/okta_api_demo
