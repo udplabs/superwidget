@@ -92,6 +92,24 @@ But first you need to provide the container with environment variables.
       port to 8000. And be sure to inject the `env.list` into your container
       with the `--env-file option` as shown.
 
+### Optional: Docker-Compose
+
+Requirements:
+
+* [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+After updating `.env` and then execute the following in your terminal:
+
+Start instances
+
+```bash
+docker-compose up
+```
+
+Navigate to `http://localhost:8000`.
+
+Stop instances. (ie. On macOS `Command+C` )
+
 ### Demoing Idp Discovery
 This app can demo IdP discovery, but there are some configuration steps to take care of. To demo IdP Discovery:
 1. Add the settting IDP_DISCO_PAGE in env.list. Set it to the relative path of your App's EMBED_LINK: Example
@@ -161,7 +179,7 @@ You can also run this demo locally, without Docker:
 8. Make migrations
     ```
     python manage.py migrate
-    ``` 
+    ```
 9. Collect static files
    ```
    python manage.py collectstatic
